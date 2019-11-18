@@ -14,7 +14,7 @@
 <body>
     <div class="container">
         <h1>Register a New Vehicle</h1>
-        <form action="/entry" method="POST" class="entry-form">
+        <form action="/register" method="POST" class="entry-form">
             <div class="form-group">
                 <label for="vehicle_number">Vehicle Registration No.</label>
                 <input type="text" class="form-control" id="vehicle_number" name="vehicle_number"
@@ -30,14 +30,6 @@
             </div>
             <button type="submit" class="btn btn-primary">Register</button>
         </form>
-        <!-- <table class="table">
-            {% for key, value in result.items() %}
-            <tr>
-                <th> {{ key }} </th>
-                <td> {{ value }} </td>
-            </tr>
-            {% endfor %}
-        </table> -->
     </div>
 </body>
 
