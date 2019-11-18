@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GHRS</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/stylesheets/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Register a New Vehicle</h1>
+        <form action="/entry" method="POST" class="entry-form">
+            <div class="form-group">
+                <label for="vehicle_number">Vehicle Registration No.</label>
+                <input type="text" class="form-control" id="vehicle_number" name="vehicle_number"
+                    placeholder="HP-22A-9922">
+            </div>
+            <div class="form-group">
+                <label for="owner_name">Owner Name</label>
+                <input type="text" class="form-control" name="owner_name" id="owner_name" placeholder="John Doe">
+            </div>
+            <div class="form-group">
+                <label for="owner_mobile">Mobile No.</label>
+                <input type="text" class="form-control" name="owner_mobile" id="owner_mobile" placeholder="9988776655">
+            </div>
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+        <!-- <table class="table">
+            {% for key, value in result.items() %}
+            <tr>
+                <th> {{ key }} </th>
+                <td> {{ value }} </td>
+            </tr>
+            {% endfor %}
+        </table> -->
+    </div>
+</body>
+
+</html>
