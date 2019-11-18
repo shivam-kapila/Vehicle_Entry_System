@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CarIn</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/stylesheets/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Search an Entry</h1>
+        <form action="/search" method="POST" class="entry-form">
+            <div class="form-group">
+                <label for="search_vehicle_entry_number">Enter Vehicle Registration No.</label>
+                <input type="text" class="form-control" id="search_vehicle_entry_number" name="search_vehicle_entry_number"
+                    placeholder="HP-22A-9922">
+            </div>
+            <button type="submit" class="btn btn-dark">Search</button>
+        </form>
+    </div>
+</body>
+
+</html>

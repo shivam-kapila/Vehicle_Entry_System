@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>GHRS</title>
+    <title>CarIn</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -14,22 +14,37 @@
 <body>
     <div class="container">
         <h1>Make an Entry</h1>
+        {%if(check == 0)%}
         <form action="/entry" method="POST" class="entry-form">
             <div class="form-group">
                 <label for="vehicle_entry_number">Vehicle Registration No.</label>
                 <input type="text" class="form-control" id="vehicle_entry_number"name="vehicle_entry_number"
-                    placeholder="HP-22A-9922">
+                    value={{vehicle_entry_number}}>
             </div>
             <div class="form-group">
                 <label for="in_time">In Time</label>
-                <input type="time" class="form-control" name="in_time" id="in_time" value="11:00:00">
+                <input type="time" class="form-control" name="in_time" id="in_time" value={{in_time}}>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Entry</button>
+        </form>
+        {% else %}
+        <form action="/entry" method="POST" class="entry-form">
+            <div class="form-group">
+                <label for="vehicle_entry_number">Vehicle Registration No.</label>
+                <input type="text" class="form-control" id="vehicle_entry_number" name="vehicle_entry_number"
+                    value={{vehicle_entry_number}}>                
+            </div>
+            <div class="form-group">
+                <label for="in_time">In Time</label>
+                <input type="time" class="form-control" name="in_time" id="in_time" value={{in_time}}>
             </div>
             <div class="form-group">
                 <label for="out_time">Out Time</label>
-                <input type="time" class="form-control" name="out_time" id="out_time" value="14:00:00">
+                <input type="time" class="form-control" name="out_time" id="out_time" value={{out_time}}>
             </div>
-            <button type="submit" class="btn btn-primary">Add entry</button>
+            <button type="submit" class="btn btn-primary">Close Entry</button>
         </form>
+        {% endif %}
     </div>
 </body>
 
