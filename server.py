@@ -109,7 +109,7 @@ def register():
         owner_name = request.form['owner_name']
         owner_mobile = request.form['owner_mobile']
     validate_entry(vehicle_number,owner_name,owner_mobile)
-    return redirect(url_for('home'))
+    return redirect(url_for('registrations'))
 
 @app.route('/entry', methods=["GET","POST"])
 def entry(): 
@@ -127,7 +127,7 @@ def entry():
             add_entry(vehicle_entry_number)
         else:
             close_entry(vehicle_entry_number)
-        return redirect(url_for('home'))
+        return redirect(url_for('entries'))
 
 
 
